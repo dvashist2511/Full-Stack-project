@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>User Name  </th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of viewdata">
+        <td><input [(ngModel)]="user.name"></td>
+        <td><input [(ngModel)]="user.email"></td>
+        <td><input [(ngModel)]="user.username"></td>
+        <td>  
+          <button type="button" class="btn btn-primary" (click)="edit(user)">Update</button>
+          <button type="button" class="btn btn-info"  (click)="onView(user)">View</button>
+          <button type="button" class="btn btn-danger" (click)="onDelete(user)">Delete</button>  
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  

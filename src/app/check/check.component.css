@@ -1,0 +1,52 @@
+/* buttons.component.css */
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* For proper dropdown positioning */
+}
+
+.btn-container button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-container button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Positioned below the toggle button */
+    left: 0;
+    margin-top: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu .btn {
+    width: 100%;
+    margin: 0; /* Remove margin to avoid spacing issues */
+    border-radius: 0; /* Remove border-radius to align with dropdown */
+}
+
+.dropdown-menu .btn:not(:last-child) {
+    border-bottom: 1px solid #ddd; /* Add border between buttons */
+}
+
+.dropdown-menu .btn:hover {
+    background-color: #f0f0f0;
+}
